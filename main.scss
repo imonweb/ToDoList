@@ -70,7 +70,7 @@ body {
       user-select: none;
       cursor: pointer;
       position: relative;
-      
+
       &::before {
         content: '';
         position: absolute;
@@ -83,6 +83,32 @@ body {
         top: 12px;
         left: 8px;
       }
-    }
+
+      &.checked {
+        color: #555;
+        text-decoration: line-through;
+
+        &::before {
+          background-image: url(/images/checked.png);
+        }
+      }
+
+      span {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        color: #555;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+
+        &:hover {
+          background:#edeef0;
+        }
+      }
+    } // li
   }
 } /* todo-app */
